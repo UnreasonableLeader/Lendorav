@@ -28,3 +28,4 @@ window.addEventListener('scroll', showSections);
 
 // Esialgne kontroll (kui lõigud on juba nähtaval)
 showSections();
+

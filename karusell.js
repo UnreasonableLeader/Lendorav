@@ -1,3 +1,5 @@
+
+/* emma karusell*/
 const carousel = document.querySelector('.carousel');
 const slides = document.querySelectorAll('.slide');
 const prevButton = document.querySelector('.prev-button');
