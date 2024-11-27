@@ -4,6 +4,10 @@ body {
     background-color: bisque;
 } 
 
+body {
+    cursor: url('kursor.png'), auto; /* Kui kohandatud pilt ei laadi, kasutatakse vaikimisi kursori stiili */
+}
+
 nav { /*ülemise rea*/
     background: #16a085; 
     height: 80px; 
@@ -20,7 +24,7 @@ label.logo {
 
 nav ul {/* menüü  */
     float: right; /*  paremal pool */
-    margin-right: 20px; /* Parempoolne vahe  */
+    margin-right: 10px; /* Parempoolne vahe  */
 }
 
 nav ul li {/* menüü elemendid */
@@ -36,6 +40,17 @@ nav ul li a {/* lingid */
     text-transform: uppercase; 
 }
 
+.section {
+    opacity: 0; /* Alguses nähtamatu */
+    transform: translateY(50px); /* Liigutatud veidi allapoole */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Sujuv ilmumine */
+}
+
+.section.visible {
+    opacity: 1; /* Täielikult nähtav */
+    transform: translateY(0); /* Tõstetud algasendisse */
+}
+
 h1 {
     color: #2c3e50;
     text-align: left; 
@@ -46,7 +61,7 @@ h1 {
 h2 {
     color: #34495e; 
     text-align: center; 
-    font-size: 32px; 
+    font-size: 40px; 
     margin: 20px 0; 
 }
 
@@ -59,7 +74,46 @@ h3 {
 p {
     margin: 10px 20px; /* Üleval&all, külgedel */
     color: #555; 
-    font-size: 16px; 
+    font-size: 20px; 
+}
+
+/* Keskpaigutuse konteiner */
+.center-container {
+    display: flex;
+    justify-content: center; /* Horisontaalne tsentreerimine */
+    align-items: center;    /* Vertikaalne tsentreerimine */
+    height: 20vh;           /* Konteiner võtab poole lehe kõrgusest */
+}
+
+/* Nupu kujundus */
+#annetuse_nupp {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    animation: pulse 2s infinite;
+  }
+  
+  /* Hover-efekt */
+  #annetuse_nupp:hover {
+    background-color: #45a049;
+  }
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 a {/*  linkide välimus */
