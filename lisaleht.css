@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400);
+/* Importib Google Fonts'i "Source Code Pro" fonti. Kaal 400 tähendab tavapärast fondikaalu. */
 
 html,
 body {
@@ -7,17 +8,17 @@ body {
 
 body {
   background: radial-gradient(#222922, #000500);
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Source Code Pro', monospace;/* Rakendab "Source Code Pro" fonti kogu tekstile. */
   font-weight: 400;
-  overflow: hidden;
-  padding: 30px 0 0 30px;
+  overflow: hidden; /* Peidab kõik elemendid, mis ulatuvad väljapoole lehe piire. */
+  padding: 30px 0 0 30px; /* Lisab ülemise ja vasaku serva jaoks padjad. */
   text-align: center;
 }
 
 .word {
-  visibility: visible;
-  opacity: 0;
-  transition: opacity 1s;
+  visibility: visible;  /* Element on nähtav (muudetav animatsiooni ajal). */
+  opacity: 0;/* Alguses on läbipaistmatu, et saavutada sujuv üleminek. */
+  transition: opacity 1s; /* Määrab, et läbipaistvuse muutmine toimub ühe sekundi jooksul. */
   bottom: 0;
   color: #fff;
   font-size: 2.5em;
