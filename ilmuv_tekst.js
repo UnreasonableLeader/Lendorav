@@ -1,9 +1,12 @@
 // Funktsioon, mis lisab uue teksti dünaamiliselt
 function addNewText() {
-    const newText = document.createElement('p');
-    newText.textContent = 'Uus dünaamiliselt lisatud tekst...';
-    newText.classList.add('section');
-    document.getElementById('dynamic-content').appendChild(newText);
+    const dynamicContent = document.createElement('p');
+  
+    dynamicContent.classList.add('section');
+
+    // Lisa uus tekst viimase sektsiooni juurde, kuid mitte footerisse
+    const lastSection = document.querySelector('.section:last-of-type');
+    lastSection.insertAdjacentElement('afterend', dynamicContent);
 }
 
 // Muuda showSections funktsiooni, et lisada dünaamilist teksti
