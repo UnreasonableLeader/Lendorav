@@ -40,29 +40,49 @@ nav ul li a {/* lingid */
     text-transform: uppercase; 
 }
 
-.section {
+.box {
     opacity: 0; /* Alguses nähtamatu */
-    transform: translateY(50px); /* Liigutatud veidi allapoole */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Sujuv ilmumine */
+    transform: translateY(50px) translateX(-50px) scale(0.9) rotate(-5deg); /* Kombineeritud efekt */
+    transition: opacity 0.7s ease, transform 0.7s ease; /* Sujuv ja aeglasem üleminek */
+    background-color: #ecf0f1; /* Valge taust */
+    border-radius: 10px; /* Ümardatud nurgad */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Pehme vari */
+    padding: 20px; /* Kastisisene vahe */
+    margin: 20px auto; /* Kastide vahe */
+    max-width: 800px; /* Maksimaalne laius */
 }
 
-.section.visible {
+.box.visible {
     opacity: 1; /* Täielikult nähtav */
-    transform: translateY(0); /* Tõstetud algasendisse */
+    transform: translateY(0) translateX(0) scale(1) rotate(0);/* Algne suurus ja asend */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sügavam vari nähtava kasti jaoks */
 }
 
-h1 {
+.box:hover {
+    transform: scale(1.02); /* Kergelt suureneb */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sügavam vari */
+}
+
+header h1 {
+    font-size: 80px !important;
     color: #2c3e50;
-    text-align: left; 
-    margin: 20px 0; /* Ülemval/all vahe */
-    font-size: 40px; 
+    text-align: center; 
+    margin: 90px 0; /* Üleval/all vahe */ 
+}
+
+.header-image {
+    width: 60%; /* Pilt võtab kogu lehe laiuse */
+    border-radius: 20px; /* Ümarad nurgad */
+    height: auto; /* Säilitab proportsioonid */
+    display: block; /* Eemaldab tühikud pildi all */
+    margin: 0 auto; /* Keskendab pildi */
 }
 
 h2 {
     color: #34495e; 
     text-align: center; 
     font-size: 40px; 
-    margin: 20px 0; 
+    margin: 40px 0; 
 }
 
 h3 {
@@ -72,7 +92,7 @@ h3 {
 }
 
 p {
-    margin: 10px 20px; /* Üleval&all, külgedel */
+    margin: 50px 30px; /* Üleval&all, külgedel */
     color: #555; 
     font-size: 20px; 
 }

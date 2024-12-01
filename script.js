@@ -6,26 +6,26 @@ document.getElementById('annetuse_nupp').addEventListener('click', function() {
   });
 
 // Leia kõik sektsioonid
-const sections = document.querySelectorAll('.section');
+const boxes = document.querySelectorAll('.box');
 
 // Funktsioon, mis kontrollib, kas sektsioon on vaateväljas
-function showSections() {
+function showBoxes() {
     const triggerBottom = window.innerHeight / 1.2; // Positsioon, kus lõik muutub nähtavaks
 
-    sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
+    boxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
 
-        if (sectionTop < triggerBottom) {
-            section.classList.add('visible'); // Näita lõiku
+        if (boxTop < triggerBottom) {
+            box.classList.add('visible'); // Näita lõiku
         } else {
-            section.classList.remove('visible'); // Peida lõik
+            box.classList.remove('visible'); // Peida lõik
         }
     });
 }
 
 // Lisa kerimise sündmus
-window.addEventListener('scroll', showSections);
+window.addEventListener('scroll', showBoxes);
 
 // Esialgne kontroll (kui lõigud on juba nähtaval)
-showSections();
+showBoxes();
 
