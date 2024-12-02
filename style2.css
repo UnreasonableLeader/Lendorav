@@ -23,7 +23,7 @@
 .carousel-container {
     position: relative;
     max-width: 800px; /*max laius*/
-    margin: 0 auto;/* joondatud horisontaalselt */
+    margin: 0 auto;
      overflow: hidden; /* Ülejääk sisu on peidetud */
   
   }
@@ -35,7 +35,7 @@
   .slide {
     flex: 0 0 100%; /* Iga slaid võtab 100% laiust */ 
     display: flex; /* Slaid kasutab paigutuse jaoks flexboxi */ 
-    align-items: center; /* Keskjoondatud vertikaalselt */ }
+    align-items: center;  }
   
   img {
     max-width: 100%;/*pildi max laius karusellis*/
@@ -45,8 +45,8 @@
   .prev-button,
   .next-button {
     position: absolute; /*karusellis*/
-    top: 50%; /* Vertikaalne joondamine */
-    transform: translateY(-50%); /* Keskendab nuppu vertikaalselt */
+    top: 50%; 
+    transform: translateY(-50%); 
     font-size: 24px; /* Nupu suurus */
     background: none; /* Ei ole taustavärvi */
     border: none; /* Eemaldab äärised */
