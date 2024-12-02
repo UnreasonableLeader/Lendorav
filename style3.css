@@ -1,11 +1,11 @@
 body {
-    font-family: 'Georgia', serif; /* nb kogu lehe */
+    font-family: 'Georgia', serif;
     color: #000000;
     background-color: bisque;
 } 
 
 body {
-    cursor: url('kursor.png'), auto; /* Kui kohandatud pilt ei laadi, kasutatakse vaikimisi kursori stiili */
+    cursor: url('kursor.png'), auto;
 }
 
 nav { /*ülemise rea*/
@@ -17,8 +17,8 @@ nav { /*ülemise rea*/
 label.logo {
     color: white;
     font-size: 35px; 
-    line-height: 80px; /* vertikaalselne liigutamine */
-    padding: 0 100px; /* Vasak ja parem padi */
+    line-height: 80px;
+    padding: 0 100px;
     font-weight: bold; 
 }
 
@@ -36,46 +36,46 @@ nav ul li {/* menüü elemendid */
 nav ul li a {/* lingid */
     color: white; 
     font-size: 18px; 
-    padding: 7px 13px; /* Padjad linkide sees */
+    padding: 7px 13px;
     text-transform: uppercase; 
 }
 
 .box {
-    opacity: 0; /* Alguses nähtamatu */
-    transform: translateY(50px) translateX(-50px) scale(0.9) rotate(-5deg); /* Kombineeritud efekt */
-    transition: opacity 0.7s ease, transform 0.7s ease; /* Sujuv ja aeglasem üleminek */
-    background-color: #ecf0f1; /* Valge taust */
-    border-radius: 10px; /* Ümardatud nurgad */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Pehme vari */
-    padding: 20px; /* Kastisisene vahe */
-    margin: 20px auto; /* Kastide vahe */
-    max-width: 800px; /* Maksimaalne laius */
+    opacity: 0;
+    transform: translateY(50px) translateX(-50px) scale(0.9) rotate(-5deg);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
 }
 
 .box.visible {
-    opacity: 1; /* Täielikult nähtav */
-    transform: translateY(0) translateX(0) scale(1) rotate(0);/* Algne suurus ja asend */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sügavam vari nähtava kasti jaoks */
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1) rotate(0);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .box:hover {
-    transform: scale(1.02); /* Kergelt suureneb */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sügavam vari */
+    transform: scale(1.02);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
     font-size: 80px !important;
     color: #2c3e50;
     text-align: center; 
-    margin: 90px 0; /* Üleval/all vahe */ 
+    margin: 90px 0;
 }
 
 .header-image {
-    width: 60%; /* Pilt võtab kogu lehe laiuse */
-    border-radius: 20px; /* Ümarad nurgad */
-    height: auto; /* Säilitab proportsioonid */
-    display: block; /* Eemaldab tühikud pildi all */
-    margin: 0 auto; /* Keskendab pildi */
+    width: 60%;
+    border-radius: 20px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 h2 {
@@ -88,24 +88,24 @@ h2 {
 h3 {
     color: #16a085; 
     font-size: 24px; 
-    margin-top: 20px; /* Üleval vahe */
+    margin-top: 20px;
 }
 
 p {
-    margin: 50px 30px; /* Üleval&all, külgedel */
+    margin: 50px 30px;
     color: #555; 
     font-size: 20px; 
 }
 
-/* Keskpaigutuse konteiner */
+
 .center-container {
     display: flex;
-    justify-content: center; /* Horisontaalne tsentreerimine */
-    align-items: center;    /* Vertikaalne tsentreerimine */
-    height: 20vh;           /* Konteiner võtab poole lehe kõrgusest */
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
 }
 
-/* Nupu kujundus */
+
 #annetuse_nupp {
     background-color: #4CAF50;
     color: white;
@@ -118,7 +118,7 @@ p {
     animation: pulse 2s infinite;
   }
   
-  /* Hover-efekt */
+
   #annetuse_nupp:hover {
     background-color: #45a049;
   }
