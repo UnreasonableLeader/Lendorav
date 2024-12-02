@@ -1,0 +1,88 @@
+.container {
+    display: flex; 
+    align-items: center; /* Vertikaalselt */
+    justify-content: center; /* Horisontaalselt */
+    margin:20px; /* Ümber vahe*/
+    padding: 10px; 
+    background-color: #ecf0f1; 
+    border-radius: 10px; /* Ümarad nurgad */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Varjutus */
+}
+
+
+.container img {
+    max-width: 250px; 
+    border-radius: 10px; 
+    margin-right: 20px;
+    margin-left: 60px;
+
+}
+
+
+/* algab lisa karussellile*/
+.carousel-container {
+    position: relative;
+    max-width: 800px; /*max laius*/
+    margin: 0 auto;/* joondatud horisontaalselt */
+     overflow: hidden; /* Ülejääk sisu on peidetud */
+  
+  }
+  .carousel {
+    display: flex; /* Karussell kasutab paigutuse jaoks flexboxi -->paindlikum dünaamiliste asjadega(tõhusamalt asju paigutada ja joondada selleskonteineris)*/
+    transition: transform 0.5s ease-in-out;/* Sujuv üleminek */
+  }
+  
+  .slide {
+    flex: 0 0 100%; /* Iga slaid võtab 100% laiust */ 
+    display: flex; /* Slaid kasutab paigutuse jaoks flexboxi */ 
+    align-items: center; /* Keskjoondatud vertikaalselt */ }
+  
+  img {
+    max-width: 100%;/*pildi max laius karusellis*/
+    height: auto;/*säilitab pildi proportsioonid*/
+  }
+  
+  .prev-button,
+  .next-button {
+    position: absolute; /*karusellis*/
+    top: 50%; /* Vertikaalne joondamine */
+    transform: translateY(-50%); /* Keskendab nuppu vertikaalselt */
+    font-size: 24px; /* Nupu suurus */
+    background: none; /* Ei ole taustavärvi */
+    border: none; /* Eemaldab äärised */
+    cursor: pointer; /* Kursori ikoon muutub klikitavaks */
+}
+  
+  .prev-button {
+    left: 10px;
+  }
+  
+  .next-button {
+    right: 10px;
+  }
+
+
+
+/*dünaamilisele tekstile*/
+  .section { 
+    opacity: 0; /* Alguses nähtamatu */
+    transition: opacity 0.6s ease-in-out; /* Sujuv ilmumine */
+  } 
+  .section.visible { 
+    opacity: 1/* Nähtavaks muutumine */
+  }
+
+
+/* Meedia päringud väiksemate ekraanide jaoks */
+  @media screen and (max-width: 768px) {
+    .slide {
+      flex: 0 0 100%;/* Iga slaid täidab 100% laiuse */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .carousel-container {
+      max-width: 100%; /* Kohandab karusselli laiust kitsastes vaadetes */
+    }
+  }
+  
