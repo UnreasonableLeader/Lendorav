@@ -91,6 +91,10 @@ h3 {
     margin-top: 20px;
 }
 
+h4 {
+    color: #758996;
+}
+
 p {
     margin: 50px 30px;
     color: #555; 
@@ -137,7 +141,7 @@ p {
 }
 
 a {/*  linkide välimus */
-    color: #455d6d;
+    color: #758996;
     text-decoration: none; /* Eemaldab alljoone */
 }
 
