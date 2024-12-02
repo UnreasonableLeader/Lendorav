@@ -1,4 +1,3 @@
-
 .container {
     display: flex; 
     align-items: center; /* Vertikaalselt */
@@ -18,6 +17,7 @@
     margin-left: 60px;
 
 }
+
 
 /* algab lisa karussellile*/
 .carousel-container {
