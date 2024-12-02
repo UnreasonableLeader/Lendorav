@@ -7,7 +7,7 @@ body {
 }
 
 body {
-  background: radial-gradient(#222922, #000500);
+  background: radial-gradient(#222922, #000500);/*taustastiil, kus värvid levivad ümmarguselt keskpunktist välja*/
   font-family: 'Source Code Pro', monospace;/* Rakendab "Source Code Pro" fonti kogu tekstile. */
   font-weight: 400;
   overflow: hidden; /* Peidab kõik elemendid, mis ulatuvad väljapoole lehe piire. */
@@ -23,24 +23,24 @@ body {
   color: #fff;
   font-size: 2.5em;
   height: 2.5em;
-  left: 0;
-  line-height: 2.5em;
-  margin: auto;
-  right: 0;
+  left: 0;/* Elemendi vasak pool on joondatud vasaku äärega. */
+  line-height: 2.5em;   /* Tagab vertikaalse tsentreerimise elemendi sees. */
+  margin: auto;/* Elemendi horisontaalne ja vertikaalne keskjoondus. */
+  right: 0; /* Elemendi parem pool on joondatud parema äärega. */
   position: absolute;
-  text-shadow: 0 0 10px rgba(50, 150, 50, 0.5), 0 0 5px rgba(100, 255, 100, 0.5);
+  text-shadow: 0 0 10px rgba(50, 150, 50, 0.5), 0 0 5px rgba(100, 255, 100, 0.5); /* Lisab tekstile rohelise kumaefekti. */
   top: 0
 }
 
 .word span {
-  display: inline-block;
-  transform: translateX(100%) scale(0.9);
-  transition: transform 500ms;
+  display: inline-block;  /* Span-elemendid kuvatakse blokelementidena samal real. */
+  transform: translateX(100%) scale(0.9); /* Algseisundis nihutatakse tekst paremale ja vähendatakse suurust. */
+  transition: transform 500ms;/* Üleminek toimub poole sekundi jooksul. */
 }
 
 .word .done {
   color: #6f6;
-  transform: translateX(0) scale(1);
+  transform: translateX(0) scale(1); /* Tekst liigub tagasi oma algpositsiooni ja taastab algse suuruse. */
 }
 
 .word.loaded {
@@ -48,8 +48,8 @@ body {
   opacity: 1;
 }
 
-.overlay {
-  background-image: linear-gradient(transparent 0%, rgba(10, 16, 10, 0.5) 50%);
+.overlay {/*taust et sisu esile tõsta*/
+  background-image: linear-gradient(transparent 0%, rgba(10, 16, 10, 0.5) 50%); /* Taustapilt poolläbipaistev. */
   background-size: 1000px 2px;
   bottom: 0;
   content: '';
