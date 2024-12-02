@@ -1,42 +1,44 @@
-// Funktsioon, mis lisab uue teksti dünaamiliselt
+// Funktsioon, mis lisab uue lõigu dünaamiliselt
 function addNewText() {
-    const dynamicContent = document.createElement('p');
-  
-    dynamicContent.classList.add('section');
+    const dynamicContent = document.createElement('div'); // Loo uus <div>
+    dynamicContent.classList.add('box'); // Lisa "box" klass
+    dynamicContent.innerHTML = `
+        <h3 class="section">Uus lõik</h3>
+        <p class="section">See on dünaamiliselt lisatud tekst.</p>
+    `;
 
-    // Lisa uus tekst viimase sektsiooni juurde, kuid mitte footerisse
-    const lastSection = document.querySelector('.section:last-of-type');
-    lastSection.insertAdjacentElement('afterend', dynamicContent);
+    // Leia viimane kast ja lisa see sellele järgmiseks
+    const lastBox = document.querySelector('.box:last-of-type');
+    if (lastBox) {
+        lastBox.insertAdjacentElement('afterend', dynamicContent);
+    }
+    // Uuenda kastide loend
+    boxes = document.querySelectorAll('.box');
 }
 
-// Muuda showSections funktsiooni, et lisada dünaamilist teksti
-function showSections() {
-    const triggerBottom = window.innerHeight / 1.2; // Positsioon, kus lõik muutub nähtavaks
+// Kontrolli, kas kastid muutuvad nähtavaks
+function showBoxes() {
+    const triggerBottom = window.innerHeight / 1.2;
 
-    sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-
-        if (sectionTop < triggerBottom) {
-            section.classList.add('visible'); // Näita lõiku
+    boxes.forEach((box) => {
+        const boxTop = box.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+            box.classList.add('visible'); // Nähtavaks
         } else {
-            section.classList.remove('visible'); // Peida lõik
+            box.classList.remove('visible'); // Peidetuks
         }
     });
 
-    // Kontrolli, kas viimane lõik on nähtaval ja lisa uus tekst
-    const lastSection = sections[sections.length - 1];
-    const lastSectionBottom = lastSection.getBoundingClientRect().bottom;
-    if (lastSectionBottom < window.innerHeight) {
+    // Kui viimane kast on nähtav, lisa uus dünaamiline lõik
+    const lastBox = boxes[boxes.length - 1];
+    if (lastBox && lastBox.getBoundingClientRect().bottom < window.innerHeight) {
         addNewText();
-        sections = document.querySelectorAll('.section'); // Uuenda sektsioonide loend
     }
 }
 
-// Leia kõik sektsioonid
-let sections = document.querySelectorAll('.section');
+// Leia kõik kastid esialgselt
+let boxes = document.querySelectorAll('.box');
 
-// Lisa kerimise sündmus
-window.addEventListener('scroll', showSections);
-
-// Esialgne kontroll (kui lõigud on juba nähtaval)
-showSections();
+// Lisa sündmuse kuulaja
+window.addEventListener('scroll', showBoxes);
+showBoxes(); // Esialgne kontroll

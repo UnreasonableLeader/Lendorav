@@ -25,7 +25,7 @@ label.logo {
 
 nav ul {/* menüü  */
     float: right; /*  paremal pool */
-    margin-right: 20px; /* Parempoolne vahe  */
+    margin-right: 10px; /* Parempoolne vahe  */
 }
 
 nav ul li {/* menüü elemendid */
@@ -67,6 +67,35 @@ p {
     color: #555; 
     font-size: 16px; 
 }
+
+
+
+.box {
+  opacity: 0;
+  transform: translateY(50px) translateX(-50px) scale(0.9) rotate(-5deg);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.box.visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1) rotate(0);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
 
 .container {
     display: flex; 

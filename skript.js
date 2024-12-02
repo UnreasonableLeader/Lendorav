@@ -2,7 +2,7 @@
 const boxes = document.querySelectorAll('.box');
 
 
-// Sofia JavaScript
+// Hannese JavaScript
 // Funktsioon, mis kontrollib, kas sektsioon on vaateväljas
 function showBoxes() {
     const triggerBottom = window.innerHeight / 1.2; // Positsioon, kus lõik muutub nähtavaks
