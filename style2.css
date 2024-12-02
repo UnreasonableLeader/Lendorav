@@ -19,7 +19,7 @@
 }
 
 
-/* algab lisa karussellile*/
+/* algab lisa karussellile, järgneva võtsin allikalt: https://skillupwards.com/blog/building-a-carousel-slider-with-javascript-and-css  */
 .carousel-container {
     position: relative;
     max-width: 800px; /*max laius*/
@@ -60,29 +60,3 @@
   .next-button {
     right: 10px;
   }
-
-
-
-/*dünaamilisele tekstile*/
-  .section { 
-    opacity: 0; /* Alguses nähtamatu */
-    transition: opacity 0.6s ease-in-out; /* Sujuv ilmumine */
-  } 
-  .section.visible { 
-    opacity: 1/* Nähtavaks muutumine */
-  }
-
-
-/* Meedia päringud väiksemate ekraanide jaoks */
-  @media screen and (max-width: 768px) {
-    .slide {
-      flex: 0 0 100%;/* Iga slaid täidab 100% laiuse */
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .carousel-container {
-      max-width: 100%; /* Kohandab karusselli laiust kitsastes vaadetes */
-    }
-  }
-  

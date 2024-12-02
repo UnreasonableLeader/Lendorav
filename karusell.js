@@ -27,4 +27,4 @@ nextButton.addEventListener('click', () => {
 // Initial slide
 showSlide(currentIndex);
 
-/*  https://skillupwards.com/blog/building-a-carousel-slider-with-javascript-and-css  */
+/* allikas https://skillupwards.com/blog/building-a-carousel-slider-with-javascript-and-css , muutsin natuke ChatGPT'ga */
