@@ -1,0 +1,112 @@
+body {
+    font-family: 'Georgia', serif; /* nb kogu lehe */
+    color: #000000; 
+    background-color: bisque
+
+} 
+
+body {
+    cursor: url('kursor.png'), auto; /* Kui kohandatud pilt ei laadi, kasutatakse vaikimisi kursori stiili */
+}
+
+nav { /*ülemise rea*/
+    background: #16a085; 
+    height: 80px; 
+    width: 100%; 
+}
+
+label.logo {
+    color: white;
+    font-size: 35px; 
+    line-height: 80px; /* vertikaalselne liigutamine */
+    padding: 0 100px; /* Vasak ja parem padi */
+    font-weight: bold; 
+}
+
+nav ul {/* menüü  */
+    float: right; /*  paremal pool */
+    margin-right: 10px; /* Parempoolne vahe  */
+}
+
+nav ul li {/* menüü elemendid */
+    display: inline-block; /*  ühel real */
+    line-height: 80px; 
+    margin: 0 5px; /* vahe elementide vahel */
+}
+
+nav ul li a {/* lingid */
+    color: white; 
+    font-size: 18px; 
+    padding: 7px 13px; /* Padjad linkide sees */
+    text-transform: uppercase; 
+}
+
+.box {
+    opacity: 0;
+    transform: translateY(50px) translateX(-50px) scale(0.9) rotate(-5deg);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.box.visible {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1) rotate(0);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 80px !important;
+    color: #2c3e50;
+    text-align: center; 
+    margin: 90px 0;
+}
+
+h2 {
+    color: #34495e; 
+    text-align: center; 
+    font-size: 40px; 
+    margin: 40px 0; 
+}
+
+h3 {
+    color: #16a085; 
+    font-size: 24px; 
+    margin-top: 20px;
+}
+
+h4 {
+    color: #758996;
+}
+
+p {
+    margin: 50px 30px;
+    color: #555; 
+    font-size: 20px; 
+}
+
+a {/*  linkide välimus */
+    color: #758996;
+    text-decoration: none; /* Eemaldab alljoone */
+}
+
+a:hover {
+    text-decoration: underline; /* alljoon KUI hiirega peale lähed */
+}
+
+
+footer {
+    text-align: center; 
+    background-color: #2c3e50;  
+    padding: 20px; 
+    margin-top: 30px; 
+}
